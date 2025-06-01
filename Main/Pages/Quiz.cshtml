@@ -2,3 +2,15 @@
 @model Main.Pages.QuizModel
 @{
 }
+
+<form method="post">
+    <h2>@Model.Question.Text</h2>
+    @foreach (var answer in Model.Question.Answers)
+    {
+        <div>
+            <input type="radio" name="SelectedAnswerId" value="@answer.Id" required />
+            <label>@answer.Text</label>
+        </div>
+    }
+    <button type="submit">Далее</button>
+</form>

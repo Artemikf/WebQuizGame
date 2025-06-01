@@ -2,3 +2,19 @@
 @model Main.Pages.Admin.CreateModel
 @{
 }
+
+<h2>Создать вопрос</h2>
+<form method="post">
+    <label>Вопрос:</label>
+    <input asp-for="Question.Text" />
+    <h4>Ответы:</h4>
+    @for (int i = 0; i < Model.Answers.Count; i++)
+    {
+        <div>
+            <input asp-for="Answers[i].Text" />
+            <label>Правильный?</label>
+            <input asp-for="Answers[i].IsCorrect" type="checkbox" />
+        </div>
+    }
+    <button type="submit">Сохранить</button>
+</form>

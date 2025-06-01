@@ -2,3 +2,10 @@
 @model Main.Pages.IndexModel
 @{
 }
+
+<h1>Добро пожаловать в викторину!</h1>
+<form method="get" action="/Quiz">
+    <label>Введите имя:</label>
+    <input type="text" name="username" required />
+    <button type="submit">Начать</button>
+</form>

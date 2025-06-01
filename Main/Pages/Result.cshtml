@@ -2,3 +2,25 @@
 @model Main.Pages.ResultModel
 @{
 }
+
+<h2>Все результаты</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Пользователь</th>
+            <th>Правильные ответы</th>
+            <th>Дата</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var result in Model.AllResults)
+        {
+                <tr>
+                    <td>@result.UserName</td>
+                    <td>@result.CorrectAnswersCount</td>
+                    <td>@result.SubmittedAt.ToLocalTime().ToString("g")</td>
+                </tr>
+        }
+    </tbody>
+</table>
