@@ -1,0 +1,44 @@
+## .NET
+bin/
+obj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.log
+*.vs/
+.vscode/
+.vsconfig
+launchSettings.json
+
+## ASP.NET
+wwwroot/lib/
+#wwwroot/data/    # если ты хранишь загруженные или обработанные файлы
+
+## Конфигурация и секреты
+appsettings.Development.json
+#appsettings.*.json    # если ты хранишь чувствительные конфиги, кроме общего appsettings.json
+secrets.json
+
+## Rider / JetBrains
+.idea/
+*.sln.iml
+
+## Node / npm (если используешь npm или frontend tooling)
+node_modules/
+package-lock.json
+
+## OS
+.DS_Store
+Thumbs.db
+
+## Логи
+*.log
+
+## Папка для временных обработанных файлов
+output/
+temp/
+cache/
+
+## Папки с тестами (если генерируются временные данные)
+TestResults/
